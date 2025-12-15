@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulation Demo</title>
+</head>
+<body>
+  <h2>Call Simulation (Learning Only)</h2>
+
+  <label>Number:</label><br>
+  <input type="text" id="num" placeholder="01XXXXXXXXX"><br><br>
+
+  <label>Times:</label><br>
+  <input type="number" id="times" value="5"><br><br>
+
+  <button onclick="simulate()">Start Simulation</button>
+
+  <p id="output"></p>
+
+  <script>
+    function simulate() {
+      let n = document.getElementById("times").value;
+      let out = document.getElementById("output");
+      out.innerHTML = "";
+
+      for (let i = 1; i <= n; i++) {
+        out.innerHTML += "Simulation call " + i + "<br>";
+      }
+    }
+  </script>
+</body>
+</html>
